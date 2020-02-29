@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkippyNet.Api", "SkippyNet.Api\SkippyNet.Api.csproj", "{7818BF6E-8EF8-4179-8308-0E1269FA14DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkippyNet.Api.Test", "SkippyNet.Api.Test\SkippyNet.Api.Test.csproj", "{561A79A8-1B0E-4601-A5E5-70ED231E96A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkippyNet.Api.Test", "SkippyNet.Api.Test\SkippyNet.Api.Test.csproj", "{561A79A8-1B0E-4601-A5E5-70ED231E96A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkippyNet.Api.Seed", "SkippyNet.Api.Seed\SkippyNet.Api.Seed.csproj", "{AA4EA2A7-3083-442C-B6DF-E79FFDAB53A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkippyNet.Api.Seed", "SkippyNet.Api.Seed\SkippyNet.Api.Seed.csproj", "{AA4EA2A7-3083-442C-B6DF-E79FFDAB53A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkippyNet.Api.Scheduler", "SkippyNet.Api.Scheduler\SkippyNet.Api.Scheduler.csproj", "{A3F6E879-3D35-4795-A453-6B1A82D470B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkippyNet.Api.Scheduler", "SkippyNet.Api.Scheduler\SkippyNet.Api.Scheduler.csproj", "{A3F6E879-3D35-4795-A453-6B1A82D470B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkippyNet.Api.Queue", "SkippyNet.Api.Queue\SkippyNet.Api.Queue.csproj", "{38481A16-4E0A-4143-A67B-F46DE74E232D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkippyNet.Api.Queue", "SkippyNet.Api.Queue\SkippyNet.Api.Queue.csproj", "{38481A16-4E0A-4143-A67B-F46DE74E232D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
