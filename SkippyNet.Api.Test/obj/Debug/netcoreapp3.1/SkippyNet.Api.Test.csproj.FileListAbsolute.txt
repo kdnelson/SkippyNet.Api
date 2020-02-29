@@ -1,0 +1,11 @@
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.exe
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.deps.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.runtimeconfig.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.runtimeconfig.dev.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\SkippyNet.Api.Test.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.csprojAssemblyReference.cache
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.AssemblyInfoInputs.cache
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.AssemblyInfo.cs
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.pdb

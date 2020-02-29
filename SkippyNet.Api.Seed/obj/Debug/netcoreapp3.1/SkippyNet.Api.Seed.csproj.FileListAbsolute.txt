@@ -1,0 +1,11 @@
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.exe
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.deps.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.runtimeconfig.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.runtimeconfig.dev.json
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\bin\Debug\netcoreapp3.1\SkippyNet.Api.Seed.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\obj\Debug\netcoreapp3.1\SkippyNet.Api.Seed.csprojAssemblyReference.cache
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\obj\Debug\netcoreapp3.1\SkippyNet.Api.Seed.AssemblyInfoInputs.cache
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\obj\Debug\netcoreapp3.1\SkippyNet.Api.Seed.AssemblyInfo.cs
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\obj\Debug\netcoreapp3.1\SkippyNet.Api.Seed.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Seed\obj\Debug\netcoreapp3.1\SkippyNet.Api.Seed.pdb
