@@ -1,4 +1,5 @@
 ﻿using SkippyNet.Api.Dto.Request.Work;
+using SkippyNet.Api.Enums;
 using SkippyNet.Api.Helpers.Common;
 using SkippyNet.Api.Interfaces.Work;
 using System;
@@ -9,34 +10,104 @@ namespace SkippyNet.Api.Helpers.Work
 {
     public class WorkRepository : IWorkRepository
     {
-        public Task<ResponseDto> CreateAsync(DataAccess.Models.Work model)
+        private const string ClassName = nameof(WorkRepository);
+
+        public async Task<ResponseDto> CreateAsync(DataAccess.Models.Work model)
         {
-            throw new NotImplementedException();
+            const string methodName = ClassName + "." + nameof(CreateAsync);
+
+            var response = new ResponseDto();
+
+            try
+            {
+                // TODO Make entity action here
+                response.SetSuccess();
+            }
+            catch (Exception ex)
+            {
+                response.SetError(0, ex.Message, methodName, ResponseType.Error);
+            }
+
+            return response;
         }
 
-        public Task<ResponseDto> DeleteAsync(int id)
+        public async Task<ResponseDto> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            const string methodName = ClassName + "." + nameof(DeleteAsync);
+
+            var response = new ResponseDto();
+
+            try
+            {
+                // TODO Make entity action here
+                response.SetSuccess();
+            }
+            catch (Exception ex)
+            {
+                response.SetError(0, ex.Message, methodName, ResponseType.Error);
+            }
+
+            return response;
         }
 
-        public Task<ResponseDto<DataAccess.Models.Work>> GetAsync(int id)
+        public async Task<ResponseDto<DataAccess.Models.Work>> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            const string methodName = ClassName + "." + nameof(GetAsync);
+
+            var response = new ResponseDto<DataAccess.Models.Work>();
+
+            try
+            {
+                // TODO Make entity action here
+                response.SetSuccess();
+            }
+            catch (Exception ex)
+            {
+                response.SetError(0, ex.Message, methodName, ResponseType.Error);
+            }
+
+            return response;
         }
 
-        public Task<ResponseDto<List<DataAccess.Models.Work>>> SearchAsync(WorkSearchRequestDto request)
+        public async Task<ResponseDto<List<DataAccess.Models.Work>>> SearchAsync(WorkSearchRequestDto request)
         {
-            throw new NotImplementedException();
+            const string methodName = ClassName + "." + nameof(SearchAsync);
+
+            var response = new ResponseDto<List<DataAccess.Models.Work>>()
+            {
+                Result = new List<DataAccess.Models.Work>()
+            };
+
+            try
+            {
+                // TODO Make entity action here
+                response.SetSuccess();
+            }
+            catch (Exception ex)
+            {
+                response.SetError(0, ex.Message, methodName, ResponseType.Error);
+            }
+
+            return response;
         }
 
-        public Task<ResponseDto<List<DataAccess.Models.Work>>> SearchByTicketIdAsync(WorkSearchRequestDto request)
+        public async Task<ResponseDto> UpdateAsync(DataAccess.Models.Work model)
         {
-            throw new NotImplementedException();
-        }
+            const string methodName = ClassName + "." + nameof(UpdateAsync);
 
-        public Task<ResponseDto> UpdateAsync(DataAccess.Models.Work model)
-        {
-            throw new NotImplementedException();
+            var response = new ResponseDto();
+
+            try
+            {
+                // TODO Make entity action here
+                response.SetSuccess();
+            }
+            catch (Exception ex)
+            {
+                response.SetError(0, ex.Message, methodName, ResponseType.Error);
+            }
+
+            return response;
         }
     }
 }

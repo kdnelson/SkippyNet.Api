@@ -89,3 +89,4 @@ C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api\obj\Debug\netcoreapp3.1\Skippy
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api\obj\Debug\netcoreapp3.1\SkippyNet.Api.csproj.CopyComplete
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api\obj\Debug\netcoreapp3.1\SkippyNet.Api.dll
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api\obj\Debug\netcoreapp3.1\SkippyNet.Api.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api\obj\Debug\netcoreapp3.1\SkippyNet.Api.csprojAssemblyReference.cache

@@ -8,3 +8,4 @@ C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Queue\obj\Debug\netcoreapp3.1\
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Queue\obj\Debug\netcoreapp3.1\SkippyNet.Api.Queue.AssemblyInfo.cs
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Queue\obj\Debug\netcoreapp3.1\SkippyNet.Api.Queue.dll
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Queue\obj\Debug\netcoreapp3.1\SkippyNet.Api.Queue.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Queue\obj\Debug\netcoreapp3.1\SkippyNet.Api.Queue.csprojAssemblyReference.cache

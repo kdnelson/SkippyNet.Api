@@ -1,7 +1,9 @@
-﻿namespace SkippyNet.Api.Dto.Request.Work
+﻿using SkippyNet.Api.Interfaces.Common;
+
+namespace SkippyNet.Api.Dto.Request.Work
 {
-    public class WorkGetRequestDto
+    public class WorkGetRequestDto : IRequest
     {
-        public string WorkId { get; set; }
+        public int WorkId { get; set; }
     }
 }

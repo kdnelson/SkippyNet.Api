@@ -11,7 +11,6 @@ namespace SkippyNet.Api.Interfaces.Work
         Task<ResponseDto> DeleteAsync(int id);
         Task<ResponseDto<DataAccess.Models.Work>> GetAsync(int id);
         Task<ResponseDto<List<DataAccess.Models.Work>>> SearchAsync(WorkSearchRequestDto request);
-        Task<ResponseDto<List<DataAccess.Models.Work>>> SearchByTicketIdAsync(WorkSearchRequestDto request);
         Task<ResponseDto> UpdateAsync(DataAccess.Models.Work model);
     }
 }

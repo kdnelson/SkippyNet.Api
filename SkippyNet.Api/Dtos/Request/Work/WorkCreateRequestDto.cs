@@ -1,8 +1,10 @@
-﻿namespace SkippyNet.Api.Dto.Request.Work
+﻿using SkippyNet.Api.Interfaces.Common;
+
+namespace SkippyNet.Api.Dto.Request.Work
 {
-    public class WorkCreateRequestDto
+    public class WorkCreateRequestDto : IRequest
     {
-        public string WorkId { get; set; }
+        public int WorkId { get; set; }
         public string WorkName { get; set; }
         public bool IsCompleted { get; set; }
         public bool IsActive { get; set; }

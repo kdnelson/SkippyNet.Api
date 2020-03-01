@@ -4,6 +4,6 @@ namespace SkippyNet.Api.Interfaces.Work
 {
     public interface IWorkValidationHelper
     {
-        ResponseDto ValidateAsync(object request, string token);
+        ResponseDto ValidateAsync(object request);
     }
 }

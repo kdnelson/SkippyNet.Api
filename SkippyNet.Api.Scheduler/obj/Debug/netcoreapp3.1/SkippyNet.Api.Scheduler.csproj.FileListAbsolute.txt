@@ -8,3 +8,4 @@ C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Scheduler\obj\Debug\netcoreapp
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Scheduler\obj\Debug\netcoreapp3.1\SkippyNet.Api.Scheduler.AssemblyInfo.cs
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Scheduler\obj\Debug\netcoreapp3.1\SkippyNet.Api.Scheduler.dll
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Scheduler\obj\Debug\netcoreapp3.1\SkippyNet.Api.Scheduler.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Scheduler\obj\Debug\netcoreapp3.1\SkippyNet.Api.Scheduler.csprojAssemblyReference.cache

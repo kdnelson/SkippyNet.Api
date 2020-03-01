@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SkippyNet.Api.Helpers.Common;
 using SkippyNet.Api.Helpers.Work;
+using SkippyNet.Api.Interfaces.Common;
 using SkippyNet.Api.Interfaces.Work;
 using System;
 
@@ -36,7 +38,12 @@ namespace SkippyNet.Api
 
             // Register IOCs
             //
+            // Common
+            //
+            services.AddScoped<IApiAuthHelper, ApiAuthHelper>();
+
             // Work
+            //
             services.AddScoped<IWorkHelper, WorkHelper>();
             services.AddScoped<IWorkMappingHelper, WorkMappingHelper>();
             services.AddScoped<IWorkValidationHelper, WorkValidationHelper>();
