@@ -1,7 +1,6 @@
 ﻿using SkippyNet.Api.Dto.Request.Work;
 using SkippyNet.Api.Enums;
 using SkippyNet.Api.Helpers.Common;
-using SkippyNet.Api.Interfaces.Common;
 using SkippyNet.Api.Interfaces.Work;
 using System;
 using System.Linq;
@@ -12,49 +11,8 @@ namespace SkippyNet.Api.Helpers.Work
     {
         private const string ClassName = nameof(WorkValidationHelper);
 
-        private readonly IApiAuthHelper _apiAuthHelper;
-
-        public WorkValidationHelper(IApiAuthHelper apiAuthHelper)
+        public WorkValidationHelper()
         {
-            _apiAuthHelper = apiAuthHelper;
-        }
-
-        private ResponseDto CheckRequestParams(object request)
-        {
-            const string methodName = ClassName + "." + nameof(CheckRequestParams);
-            var response = new ResponseDto();
-
-            if (request == null)
-            {
-                response.SetError(0, ErrorMessage.NullRequest, methodName);
-                return response;
-            }
-
-            if (request.GetType() == typeof(WorkCreateRequestDto))
-            {
-                response = CheckCreateParams((WorkCreateRequestDto)request);
-            }
-            else if (request.GetType() == typeof(WorkDeleteRequestDto))
-            {
-                response = CheckDeleteParams((WorkDeleteRequestDto)request);
-            }
-            else if (request.GetType() == typeof(WorkGetRequestDto))
-            {
-                response = CheckGetParams((WorkGetRequestDto)request);
-            }
-            else if (request.GetType() == typeof(WorkSearchRequestDto))
-            {
-                response = CheckSearchParams((WorkSearchRequestDto)request);
-            }
-            else if (request.GetType() == typeof(WorkUpdateRequestDto))
-            {
-                response = CheckUpdateParams((WorkUpdateRequestDto)request);
-            }
-            else
-            {
-                response.SetError(0, ErrorMessage.DtoNotFound, methodName);
-            }
-            return response;
         }
 
         private ResponseDto CheckCreateParams(WorkCreateRequestDto request)
@@ -84,36 +42,6 @@ namespace SkippyNet.Api.Helpers.Work
                 if (request.IsActive.GetType() != typeof(bool))
                 {
                     response.Validation.InvalidFields.Add(new ResponseValidationDto.InValidField() { FieldName = "request.IsActive", Message = ErrorMessage.ExpectedBoolean });
-                }
-
-                if (response.Validation.InvalidFields.Any())
-                {
-                    response.SetError(0, ErrorMessage.ValidationError, methodName);
-                }
-                else
-                {
-                    response.SetSuccess();
-                }
-            }
-
-            return response;
-        }
-
-        private ResponseDto CheckDeleteParams(WorkDeleteRequestDto request)
-        {
-            const string methodName = ClassName + "." + nameof(CheckDeleteParams);
-            var response = new ResponseDto();
-
-            var properties = request.GetType().GetProperties();
-            if (properties.Length != 1)
-            {
-                response.SetError(0, ErrorMessage.InvalidArguments, methodName);
-            }
-            else
-            {
-                if (request.WorkId.GetType() != typeof(int))
-                {
-                    response.Validation.InvalidFields.Add(new ResponseValidationDto.InValidField() { FieldName = "request.WorkId", Message = ErrorMessage.ExpectedInt });
                 }
 
                 if (response.Validation.InvalidFields.Any())
@@ -219,6 +147,74 @@ namespace SkippyNet.Api.Helpers.Work
             return response;
         }
 
+        private ResponseDto CheckDeleteParams(WorkDeleteRequestDto request)
+        {
+            const string methodName = ClassName + "." + nameof(CheckDeleteParams);
+            var response = new ResponseDto();
+
+            var properties = request.GetType().GetProperties();
+            if (properties.Length != 1)
+            {
+                response.SetError(0, ErrorMessage.InvalidArguments, methodName);
+            }
+            else
+            {
+                if (request.WorkId.GetType() != typeof(int))
+                {
+                    response.Validation.InvalidFields.Add(new ResponseValidationDto.InValidField() { FieldName = "request.WorkId", Message = ErrorMessage.ExpectedInt });
+                }
+
+                if (response.Validation.InvalidFields.Any())
+                {
+                    response.SetError(0, ErrorMessage.ValidationError, methodName);
+                }
+                else
+                {
+                    response.SetSuccess();
+                }
+            }
+
+            return response;
+        }
+
+        private ResponseDto CheckRequestParams(object request)
+        {
+            const string methodName = ClassName + "." + nameof(CheckRequestParams);
+            var response = new ResponseDto();
+
+            if (request == null)
+            {
+                response.SetError(0, ErrorMessage.NullRequest, methodName);
+                return response;
+            }
+
+            if (request.GetType() == typeof(WorkCreateRequestDto))
+            {
+                response = CheckCreateParams((WorkCreateRequestDto)request);
+            }
+            else if (request.GetType() == typeof(WorkGetRequestDto))
+            {
+                response = CheckGetParams((WorkGetRequestDto)request);
+            }
+            else if (request.GetType() == typeof(WorkSearchRequestDto))
+            {
+                response = CheckSearchParams((WorkSearchRequestDto)request);
+            }
+            else if (request.GetType() == typeof(WorkUpdateRequestDto))
+            {
+                response = CheckUpdateParams((WorkUpdateRequestDto)request);
+            }
+            else if (request.GetType() == typeof(WorkDeleteRequestDto))
+            {
+                response = CheckDeleteParams((WorkDeleteRequestDto)request);
+            }
+            else
+            {
+                response.SetError(0, ErrorMessage.DtoNotFound, methodName);
+            }
+            return response;
+        }
+
         private ResponseDto CheckRequestPermissions(object request)
         {
             const string methodName = ClassName + "." + nameof(CheckRequestPermissions);
@@ -236,10 +232,6 @@ namespace SkippyNet.Api.Helpers.Work
                 {
                     response = HasPermission(PermissionType.WorkCreate.ToString());
                 }
-                else if (request.GetType() == typeof(WorkDeleteRequestDto))
-                {
-                    response = HasPermission(PermissionType.WorkDelete.ToString());
-                }
                 else if (request.GetType() == typeof(WorkGetRequestDto))
                 {
                     response = HasPermission(PermissionType.WorkGet.ToString());
@@ -251,6 +243,10 @@ namespace SkippyNet.Api.Helpers.Work
                 else if (request.GetType() == typeof(WorkUpdateRequestDto))
                 {
                     response = HasPermission(PermissionType.WorkUpdate.ToString());
+                }
+                else if (request.GetType() == typeof(WorkDeleteRequestDto))
+                {
+                    response = HasPermission(PermissionType.WorkDelete.ToString());
                 }
                 else
                 {
@@ -267,7 +263,12 @@ namespace SkippyNet.Api.Helpers.Work
 
         public ResponseDto ValidateAsync(object request)
         {
-            throw new NotImplementedException();
+            var checkRequestParamsResponse = CheckRequestParams(request);
+            if (checkRequestParamsResponse.Success)
+            {
+                return CheckRequestPermissions(request);
+            }
+            return checkRequestParamsResponse;
         }
 
         private ResponseDto HasPermission(string permissionType)

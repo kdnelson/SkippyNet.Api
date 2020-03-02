@@ -23,8 +23,6 @@ namespace SkippyNet.Api.Controllers
         [Route("create")]
         public async Task<ResponseDto> Create([FromBody] WorkCreateRequestDto request)
         {
-            // TODO Add to a Controller filter
-            //var token = this.Request.Headers["Authorization"].ToString().Split(' ')[1];
             var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
             if (!checkRequestResponse.Success)
             {
@@ -35,26 +33,9 @@ namespace SkippyNet.Api.Controllers
         }
 
         [HttpPost]
-        [Route("delete")]
-        public async Task<ResponseDto> Delete([FromBody] WorkDeleteRequestDto request)
-        {
-            // TODO Add to a Controller filter
-            //var token = this.Request.Headers["Authorization"].ToString().Split(' ')[1];
-            var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
-            if (!checkRequestResponse.Success)
-            {
-                return checkRequestResponse;
-            }
-
-            return await _workHelper.DeleteAsync(request.WorkId);
-        }
-
-        [HttpPost]
         [Route("get")]
         public async Task<ResponseDto<WorkResponseDto>> Get([FromBody] WorkGetRequestDto request)
         {
-            // TODO Add to a Controller filter
-            //var token = this.Request.Headers["Authorization"].ToString().Split(' ')[1];
             var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
             if (!checkRequestResponse.Success)
             {
@@ -68,8 +49,6 @@ namespace SkippyNet.Api.Controllers
         [Route("search")]
         public async Task<ResponseDto<List<WorkResponseDto>>> Search([FromBody] WorkSearchRequestDto request)
         {
-            // TODO Add to a Controller filter
-            //var token = this.Request.Headers["Authorization"].ToString().Split(' ')[1];
             var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
             if (!checkRequestResponse.Success)
             {
@@ -83,8 +62,6 @@ namespace SkippyNet.Api.Controllers
         [Route("update")]
         public async Task<ResponseDto> Update([FromBody] WorkUpdateRequestDto request)
         {
-            // TODO Add to a Controller filter
-            //var token = this.Request.Headers["Authorization"].ToString().Split(' ')[1];
             var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
             if (!checkRequestResponse.Success)
             {
@@ -92,6 +69,19 @@ namespace SkippyNet.Api.Controllers
             }
 
             return await _workHelper.UpdateAsync(request);
+        }
+
+        [HttpPost]
+        [Route("delete")]
+        public async Task<ResponseDto> Delete([FromBody] WorkDeleteRequestDto request)
+        {
+            var checkRequestResponse = _workHelper.IsRequestValidAsync(request);
+            if (!checkRequestResponse.Success)
+            {
+                return checkRequestResponse;
+            }
+
+            return await _workHelper.DeleteAsync(request.WorkId);
         }
     }
 }

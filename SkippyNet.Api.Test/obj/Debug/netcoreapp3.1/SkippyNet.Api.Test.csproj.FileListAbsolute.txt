@@ -8,4 +8,8 @@ C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\S
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.AssemblyInfo.cs
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.dll
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.pdb
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\Unity.Container.dll
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.csproj.CopyComplete
+C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\krisd\GitHub\SkippyNet.Api\SkippyNet.Api.Test\obj\Debug\netcoreapp3.1\SkippyNet.Api.Test.csprojAssemblyReference.cache
